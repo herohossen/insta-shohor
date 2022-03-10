@@ -21,7 +21,7 @@ const addToLiked = (id) => {
 };
 
 const reportPost = (id) => {
-    reportedPostsId.push(id);
+    reportedPostsId.push(id);  //1st Bug Solved
     const remainingPosts = posts.filter((post) => !reportedPostsId.includes(post.id));
     showPosts(remainingPosts);
 };
@@ -52,6 +52,7 @@ const switchTab = (id) => {
 
 const createPost = (post) => {
     const image = post.image;
+    const userImage = post.userImage; //user image issue 2 and line 67
     const div = document.createElement( "article" );
     div.classList.add( "post" );
     div.innerHTML = `
@@ -62,7 +63,7 @@ const createPost = (post) => {
                     target="_blank"
                     class="post__avatar"
                   >
-                    <img src="${image}" alt="User Picture" />
+                    <img src="${userImage}" alt="User Picture" />
                   </a>
                   <a href="#" class="post__user">phero</a>
                 </div>
