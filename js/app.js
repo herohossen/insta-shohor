@@ -146,7 +146,7 @@ const displayLikedPosts = () => {
   const likedPosts = getLikedPosts();
 
   const likedPostsContainer = document.getElementById( "liked" );
-  likedPostsContainer.innerHTML = "";
+  likedPostsContainer.innerHTML = ""; // 6th bug solved
   
   likedPosts.forEach((post) => {
       const div = createPost(post);
