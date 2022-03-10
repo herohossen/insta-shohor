@@ -159,8 +159,8 @@ const displayReportedPosts = () => {
 
   const reportedPostsContainer = document.getElementById( "reported" );
   reportedPostsContainer.innerHTML = "";
-  
-  reportedPosts.forEach((post) => {                           //issue 5
+  //5th bug solved
+  reportedPosts.forEach((post) => {
       const div = createPost(post);
       reportedPostsContainer.appendChild(div);
   });
