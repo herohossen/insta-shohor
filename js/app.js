@@ -49,7 +49,7 @@ const switchTab = (id) => {
         displayReportedPosts();
     }
 };
-
+//4th bug solved line 124 and 127
 const createPost = (post) => {
     const image = post.image;
     const userImage = post.userImage; //user image issue 2 and line 67
@@ -121,10 +121,9 @@ const createPost = (post) => {
                   <div class="post__description">
                     <small>
                       <a class="post__name--underline" href="#">
-                          ${post.comments?.user}
+                          ${post.comments[0]?.user} 
                       </a>
-                      ${post.comments?.text}
-                    </small>
+                      ${post.comments[0]?.text} 
                   </div>
                   <span class="post__date-time">30 minutes ago</span>
                 </div>
